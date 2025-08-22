@@ -1,0 +1,36 @@
+.advantages_header {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: center;
+	gap: 70px;
+}
+
+.advantages_img {
+	max-width: 960px;
+	margin: 20px auto;
+	padding: 12px;
+}
+
+.bring_car {
+	max-width: 936px;
+	height: 40vh;
+	padding: 12px;
+	margin: 20px auto;
+	position: relative;
+	background-image: url('../../../public/img/advantages_second.jpg');
+	background-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+	color: #fff;
+}
+
+.bring_car p {
+	font-size: clamp(2rem, 2.5vw, 3rem);
+}

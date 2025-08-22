@@ -1,0 +1,18 @@
+.advantages_list {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 12px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.advantages_list_title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: Jura;
+	font-size: clamp(2rem, 2.25vw, 2.75rem);
+}

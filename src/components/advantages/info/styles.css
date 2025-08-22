@@ -1,0 +1,22 @@
+.advantages_title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.advantages_title h2 {
+	max-width: 750px;
+	font-family: Jura;
+	text-align: start;
+	font-size: clamp(2rem, 2.25vw, 2.753rem);
+}
+
+.advantages_description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	font-size: 18px;
+	line-height: 25px;
+}

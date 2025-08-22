@@ -4,8 +4,8 @@ import './styles.css'
 
 export const Welcome = () => {
 	return (
-		<div className='welcome_root'>
-			<section className='welcome'>
+		<section className='welcome_root'>
+			<article className='welcome'>
 				<nav className='navLinks'>
 					{links.map(item => (
 						<a
@@ -46,7 +46,7 @@ export const Welcome = () => {
 						/>
 					</div>
 				</header>
-			</section>
-		</div>
+			</article>
+		</section>
 	)
 }

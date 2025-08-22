@@ -1,0 +1,16 @@
+.card_root {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-wrap: balance;
+	gap: 12px;
+	max-width: 400px;
+}
+
+.card_title {
+	color: #d32637;
+}
+
+.card_subtitle {
+	color: grey;
+}
