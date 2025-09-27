@@ -22,7 +22,8 @@
 	margin: 20px auto;
 	position: relative;
 	background-image: url('../../../public/img/advantages_second.jpg');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;

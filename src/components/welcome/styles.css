@@ -61,7 +61,9 @@
 	padding: 10px 0;
 	left: 0;
 	z-index: 2;
-	background-color: #0000007c;
+	background-color: #4f4c4c45;
+	backdrop-filter: blur(6px);
+	background-clip: inherit;
 }
 
 .header_title {

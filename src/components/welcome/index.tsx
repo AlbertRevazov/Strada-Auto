@@ -1,24 +1,19 @@
-import { Button } from '../../common/button'
-import { links } from '../../data'
-import './styles.css'
+import { Button } from '../../common/button';
+import { links } from '../../data';
+import './styles.css';
 
-export const Welcome = () => {
-	return (
-		<section className='welcome_root'>
-			<article className='welcome'>
-				<nav className='navLinks'>
-					{links.map(item => (
-						<a
-							href={`#${item.link}`}
-							className='navLinks_link'
-						>
-							{
-								item.title
-							}
-						</a>
-					))}
-				</nav>
-				{/* <video
+const Welcome = () => {
+    return (
+        <section className="welcome_root">
+            <article className="welcome">
+                <nav className="navLinks">
+                    {links.map((item) => (
+                        <a key={item.link} href={`#${item.link}`} className="navLinks_link">
+                            {item.title}
+                        </a>
+                    ))}
+                </nav>
+                {/* <video
 					className='background-video'
 					autoPlay
 					muted
@@ -32,21 +27,14 @@ export const Welcome = () => {
 					Ваш браузер не
 					поддерживает видео.
 				</video> */}
-				<header className='header'>
-					<div className='header_title'>
-						<h1>
-							автомобили
-							мечты
-							под
-							заказ
-						</h1>
-						<Button
-							cn='header_button'
-							title='Получить консультацию'
-						/>
-					</div>
-				</header>
-			</article>
-		</section>
-	)
-}
+                <header className="header">
+                    <div className="header_title">
+                        <h1>автомобили мечты под заказ</h1>
+                        <Button cn="header_button" title="Получить консультацию" />
+                    </div>
+                </header>
+            </article>
+        </section>
+    );
+};
+export default Welcome;

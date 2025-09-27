@@ -1,0 +1,13 @@
+.directory_root {
+    max-width: 960px;
+    margin: 140px auto;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    gap: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

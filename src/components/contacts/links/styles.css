@@ -1,0 +1,28 @@
+.contact_links_root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0.5;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact_link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all ease 0.3s;
+    color: #8d8d8d;
+    font-weight: 700;
+    filter: grayscale(1);
+    min-width: 225px;
+}
+
+.contact_link:hover {
+    filter: grayscale(0);
+    cursor: default;
+    color: #26a5e4;
+}

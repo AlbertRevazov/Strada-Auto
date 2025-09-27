@@ -1,0 +1,26 @@
+.contacts_root {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid black;
+}
+
+.contacts_title {
+    flex: 1;
+    padding: 5px;
+    color: #353331;
+    font-size: 24px;
+    font-family: 'PoiretOne', sans-serif;
+    line-height: 1.37;
+    font-weight: 900;
+    text-wrap: balance;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

@@ -1,13 +1,19 @@
-import { Advantages } from '../../components/advantages'
-import { Services } from '../../components/services'
-import { Welcome } from '../../components/welcome'
+import React from 'react';
+
+const LazyWelcome = React.lazy(() => import('../../components/welcome'));
+const LazyAdvantages = React.lazy(() => import('../../components/advantages'));
+const LazyDirectory = React.lazy(() => import('../../components/directory'));
+const LazyServices = React.lazy(() => import('../../components/services'));
+const LazyContacts = React.lazy(() => import('../../components/contacts'));
 
 export const Main = () => {
-	return (
-		<>
-			<Welcome />
-			<Advantages />
-			<Services />
-		</>
-	)
-}
+    return (
+        <>
+            <LazyWelcome />
+            <LazyAdvantages />
+            <LazyServices />
+            <LazyDirectory />
+            <LazyContacts />
+        </>
+    );
+};

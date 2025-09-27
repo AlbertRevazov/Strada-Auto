@@ -16,6 +16,7 @@ export const AdvatageList = () => {
 			</div>
 			{advantagesList.map(item => (
 				<Card
+					type='card'
 					key={item.id}
 					title={item.title}
 					subtitle={
