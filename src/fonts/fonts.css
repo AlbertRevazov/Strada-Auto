@@ -1,16 +1,18 @@
 @font-face {
-	font-family: 'Jura';
-	src: url('./Jura-VariableFont_wght.ttf') format('woff2');
+    font-family: 'Jura';
+    src: url('./Jura-VariableFont_wght.ttf') format('woff2');
 }
 
 @font-face {
-	font-family: 'PoiretOne';
-	src: url('./PoiretOne-Regular.ttf') format('woff2');
+    font-family: 'PoiretOne';
+    src: url('./PoiretOne-Regular.ttf') format('woff2');
 }
 
 @font-face {
-	font-family: 'MontserratAlternates';
-	src: url('./MontserratAlternates-Thin.ttf')
-		format('woff2');
+    font-family: 'MontserratAlternates';
+    src: url('./MontserratAlternates-Thin.ttf') format('woff2');
 }
-
+@font-face {
+    font-family: 'Delius';
+    src: url('./Delius-Regular.ttf') format('woff2');
+}

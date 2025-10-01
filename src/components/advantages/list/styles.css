@@ -1,18 +1,39 @@
 .advantages_list {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 12px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 40px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.advantages_list_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.advantages_list_icon {
+    display: none;
+    @media (min-width: 767.98px) {
+        display: block;
+    }
 }
 
 .advantages_list_title {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-family: Jura;
-	font-size: clamp(2rem, 2.25vw, 2.75rem);
+    font-family: 'PoiretOne';
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    text-wrap: balance;
+    padding: 0 16px;
+    margin: 6px 0;
+    color: sandybrown;
+
+    @media (min-width: 767.98px) {
+        font-size: 3rem;
+        text-align: left;
+    }
 }

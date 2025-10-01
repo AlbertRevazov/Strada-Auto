@@ -50,33 +50,9 @@ export const advantagesList = [
 ];
 
 export const AdvantageInfo = {
-    title: `	Добро пожаловать в
-					Strada Авто» — ваш
-					путь к автомобилю
-					мечты начинается
-					здесь!`,
-    description: `Strada Авто» — это
-					молодая, динамично
-					развивающаяся
-					компания, которая
-					уже успела
-					зарекомендовать себя
-					на рынке как хуйня
-					полная в сфере
-					параллельного
-					импорта
-					первоклассных
-					автомобилей.`,
-    descriptionSecond: `		Наш главный офис
-					находится в
-					Октябрьском на
-					речке, и мы гордимся
-					тем, что собрали
-					команду
-					профессионалов,
-					которые являются
-					настоящими фанатами
-					своего дела.`,
+    title: `Добро пожаловать в « Strada Авто » — ваш путь к автомобилю мечты начинается здесь!`,
+    description: `« Strada Авто » —  это молодая, динамично развивающаяся компания, которая уже успела зарекомендовать себя на рынке как надёжный партнёр в сфере параллельного импорта первоклассных автомобилей.`,
+    descriptionSecond: `Наш главный офис находится в Москве, и мы гордимся тем, что собрали команду профессионалов, которые являются настоящими фанатами своего дела.`,
 };
 
 export const ServicesList = [
@@ -119,19 +95,9 @@ export const directoryList = [
         gearbox: 'автомат',
     },
     {
-        id: 1,
-        title: 'Porsche Cayenne',
-        src: '/img/directory.jpg',
-        power: '999',
-        drive: 'задний',
-        volume: '5.5',
-        acceleration: '0.99',
-        gearbox: 'автомат',
-    },
-    {
         id: 2,
         title: 'Porsche Cayenne',
-        src: '/img/directory.jpg',
+        src: '/img/directory3.jpg',
         power: '999',
         drive: 'задний',
         volume: '5.5',
@@ -141,7 +107,7 @@ export const directoryList = [
     {
         id: 3,
         title: 'Porsche Cayenne',
-        src: '/img/directory.jpg',
+        src: '/img/directory4.png',
         power: '999',
         drive: 'задний',
         volume: '5.5',
@@ -151,7 +117,7 @@ export const directoryList = [
     {
         id: 4,
         title: 'Porsche Cayenne',
-        src: '/img/directory.jpg',
+        src: '/img/directory5.jpg',
         power: '999',
         drive: 'задний',
         volume: '5.5',

@@ -1,4 +1,6 @@
 .contacts_root {
+    box-sizing: border-box;
+    width: 93vw;
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
@@ -8,7 +10,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    border: 1px solid black;
+    border-radius: 4px;
+    border: 2px solid sandybrown;
 }
 
 .contacts_title {

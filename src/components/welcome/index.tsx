@@ -4,37 +4,30 @@ import './styles.css';
 
 const Welcome = () => {
     return (
-        <section className="welcome_root">
-            <article className="welcome">
-                <nav className="navLinks">
+        <section className="welcome">
+            <article className="welcome__container">
+                <img className="welcome_logo" src="/img/welcome_logo.png" alt="Strada Auto" />
+                <nav className="welcome__nav">
                     {links.map((item) => (
-                        <a key={item.link} href={`#${item.link}`} className="navLinks_link">
+                        <a key={item.link} href={`#${item.link}`} className="welcome__nav-link">
                             {item.title}
                         </a>
                     ))}
                 </nav>
-                {/* <video
-					className='background-video'
-					autoPlay
-					muted
-					loop
-					playsInline
-				>
-					<source
-						src='/videos/123.mp4'
-						type='video/mp4'
-					/>
-					Ваш браузер не
-					поддерживает видео.
-				</video> */}
-                <header className="header">
-                    <div className="header_title">
-                        <h1>автомобили мечты под заказ</h1>
-                        <Button cn="header_button" title="Получить консультацию" />
+                <header className="welcome__header">
+                    <div className="welcome__content">
+                        <h1 className="welcome__title">
+                            автомобили мечты <br /> под заказ
+                        </h1>
+                        <h3 className="welcome__subtitle">с выгодой от 500 000 ₽</h3>
+                        <a href="#contacts">
+                            <Button cn="welcome__button" title="Получить консультацию" />
+                        </a>
                     </div>
                 </header>
             </article>
         </section>
     );
 };
+
 export default Welcome;

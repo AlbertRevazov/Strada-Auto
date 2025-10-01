@@ -1,4 +1,3 @@
-import React from 'react';
 import { contactLinks } from '../../../data';
 import './styles.css';
 
@@ -15,9 +14,9 @@ export const ContactLinks = () => {
                             </a>
                         </div>
                     ) : (
-                        <div className="contact_link">
+                        <div className="contact_description">
                             <img src={link.img} alt="link icon" width={25} />
-                            <p>{link.description}</p>
+                            <p className="contact_description">{link.description}</p>
                         </div>
                     )}
                 </div>

@@ -1,13 +1,38 @@
 .directory_root {
     max-width: 960px;
-    margin: 140px auto;
-    padding: 12px;
+    margin: 40px auto;
+    padding: 0 12px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow: scroll;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 40px;
-    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.directory_title {
+    font-family: 'PoiretOne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: sandybrown;
+    text-align: left;
+
+    @media (min-width: 767.98px) {
+        font-size: 3rem;
+    }
+}
+
+.directory_list {
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
+    scrollbar-color: sandybrown #ffffff;
+    position: relative;
+    scrollbar-width: thin;
 }

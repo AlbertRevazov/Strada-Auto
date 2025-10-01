@@ -43,20 +43,20 @@ export const Card: React.FC<ICardProps> = ({
 
         default:
             return (
-                <div className="card_dir_root">
+                <div className="directory_card_root">
                     <img
-                        className="card_dir_image"
+                        className="directory_card_image"
                         src={img}
                         loading="lazy"
                         alt="service card image"
                     />
-                    <h3 className="card_dir_title">{title}</h3>
-                    <ul>
-                        <li>{acceleration}</li>
-                        <li>{drive}</li>
-                        <li>{gearbox}</li>
-                        <li>{power}</li>
-                        <li>{volume}</li>
+                    <h3 className="directory_card_title">{title}</h3>
+                    <ul className="directory_item">
+                        <li className="directory_item_key">Разон до ста - {acceleration}s</li>
+                        <li className="directory_item_key">Привод - {drive}</li>
+                        <li className="directory_item_key">Коробка - {gearbox}</li>
+                        <li className="directory_item_key">Мощность - {power} л.с</li>
+                        <li className="directory_item_key">Обьем - {volume} л</li>
                     </ul>
                 </div>
             );
