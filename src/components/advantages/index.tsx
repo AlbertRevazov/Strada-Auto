@@ -1,30 +1,17 @@
-import { Button } from '../../common/button'
-import { AdvantagesInfo } from './info'
-import { AdvatageList } from './list'
-import './styles.css'
+import { Button } from '../../common/button';
+import { AdvatageList } from './list';
+import './styles.css';
 
-export const Advantages = () => {
-	return (
-		<>
-			<section
-				id='advantages'
-				className='advantages_header'
-			>
-				<AdvantagesInfo />
-			</section>
-			<img
-				className='advantages_img'
-				src='img/advantages.jpg'
-				loading='lazy'
-				alt='advantages'
-			/>
-			<AdvatageList />
-			<article className='bring_car'>
-				<p>Привезём машину</p>
-				<p>вашей мечты за 20-60 дней</p>
+const Advantages = () => {
+    return (
+        <section id="advantages" className="advantages_root">
+            <AdvatageList />
+            <article className="bring_car">
+                <p className="bring_car_title">Привезём машину вашей мечты за 20-60 дней</p>
 
-				<Button title='Получить консультацию →' />
-			</article>
-		</>
-	)
-}
+                <Button title="Получить консультацию →" />
+            </article>
+        </section>
+    );
+};
+export default Advantages;

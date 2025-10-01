@@ -1,36 +1,38 @@
-.advantages_header {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 12px;
-	display: flex;
-	flex-direction: column;
-	align-items: end;
-	justify-content: center;
-	gap: 70px;
-}
-
-.advantages_img {
-	max-width: 960px;
-	margin: 20px auto;
-	padding: 12px;
+.advantages_root {
+    max-width: 960px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden;
+    gap: 30px;
 }
 
 .bring_car {
-	max-width: 936px;
-	height: 40vh;
-	padding: 12px;
-	margin: 20px auto;
-	position: relative;
-	background-image: url('../../../public/img/advantages_second.jpg');
-	background-size: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 15px;
-	color: #fff;
+    width: 100%;
+    max-width: 930px;
+    min-height: 200px;
+    padding: 12px;
+    overflow: hidden;
+    margin: 20px auto;
+    background: url('../../../public/img/advantages.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+
+    @media (min-width: 768px) {
+        height: 330px;
+    }
 }
 
-.bring_car p {
-	font-size: clamp(2rem, 2.5vw, 3rem);
+.bring_car_title,
+.bring_car_subtitle {
+    font-family: Jura;
+    font-size: 1.6rem;
+    text-align: center;
+    text-wrap: balance;
 }
