@@ -6,8 +6,9 @@ const LazyDirectory = React.lazy(() => import('../../components/directory'));
 const LazyServices = React.lazy(() => import('../../components/services'));
 const LazyContacts = React.lazy(() => import('../../components/contacts'));
 const LazyAbout = React.lazy(() => import('../../components/about'));
+const LazyFooter = React.lazy(() => import('../../components/footer'));
 
-export const Main = () => {
+const Main = () => {
     return (
         <>
             <LazyWelcome />
@@ -16,6 +17,8 @@ export const Main = () => {
             <LazyServices />
             <LazyDirectory />
             <LazyContacts />
+            <LazyFooter />
         </>
     );
 };
+export default Main;

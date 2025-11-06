@@ -2,7 +2,8 @@ import React from 'react';
 import './styles.css';
 
 interface ICardProps {
-    type: 'card' | 'directory';
+    idx?: number;
+    type: 'advantages' | 'directory' | 'services';
     title: string;
     subtitle?: string;
     img?: string;
@@ -11,9 +12,17 @@ interface ICardProps {
     volume?: string;
     acceleration?: string;
     gearbox?: string;
+    icon?: string;
+}
+
+interface ISpecItem {
+    label: string;
+    value?: string;
+    unit?: string;
 }
 
 export const Card: React.FC<ICardProps> = ({
+    idx,
     title,
     subtitle,
     img,
@@ -23,42 +32,68 @@ export const Card: React.FC<ICardProps> = ({
     gearbox,
     power,
     volume,
+    icon
 }) => {
-    switch (type) {
-        case 'card':
-            return (
-                <div className="card_root">
-                    {!!img && (
-                        <img
-                            className="card_image"
-                            src={img}
-                            loading="lazy"
-                            alt="service card image"
-                        />
-                    )}
-                    <h3 className="card_title">{title}</h3>
-                    <h4 className="card_subtitle">{subtitle}</h4>
-                </div>
-            );
+    const isEven = (idx ?? 0) % 2 === 0;
 
-        default:
-            return (
-                <div className="directory_card_root">
-                    <img
-                        className="directory_card_image"
-                        src={img}
-                        loading="lazy"
-                        alt="service card image"
-                    />
-                    <h3 className="directory_card_title">{title}</h3>
-                    <ul className="directory_item">
-                        <li className="directory_item_key">Разон до ста - {acceleration}s</li>
-                        <li className="directory_item_key">Привод - {drive}</li>
-                        <li className="directory_item_key">Коробка - {gearbox}</li>
-                        <li className="directory_item_key">Мощность - {power} л.с</li>
-                        <li className="directory_item_key">Обьем - {volume} л</li>
+    const renderImage = (className: string, alt: string) =>
+        img ? <img className={className} src={img} loading="lazy" alt={alt} /> : null;
+
+    const renderAdvantagesCard = () => (
+        <div className={`advantages-card ${isEven ? '' : 'advantages-card--odd'}`}>
+            {renderImage('advantages-card__image', title || 'Advantages image')}
+            <h3 className="advantages-card__title">{title}</h3>
+            {subtitle && (
+                <h4 className={`advantages-card__subtitle ${!isEven ? 'advantages-card__subtitle--odd' : ''}`}>
+                    {subtitle}
+                </h4>
+            )}
+        </div>
+    );
+
+    const renderServicesCard = () => (
+        <div className="services-card">
+            {img && <div className="services-card__icon">{img}</div>}
+            <h3 className="services-card__title">{title}</h3>
+            {subtitle && <p className="services-card__description">{subtitle}</p>}
+        </div>
+    );
+
+    const renderDirectoryCard = () => {
+        const specs: ISpecItem[] = [
+            { label: 'Разгон до 100 км/ч', value: acceleration, unit: ' с' },
+            { label: 'Привод', value: drive },
+            { label: 'Коробка', value: gearbox },
+            { label: 'Мощность', value: power, unit: ' л.с.' },
+            { label: 'Объем', value: volume, unit: ' л' },
+        ].filter(item => item.value);
+
+        return (
+            <div className="directory-card">
+                {renderImage('directory-card__image', title || 'Car image')}
+                <h3 className="directory-card__title">{title}</h3>
+                {subtitle && <h4 className="directory-card__subtitle">{subtitle}</h4>}
+                <div className="directory-card__specs">
+                    <ul className="directory-card__specs-list">
+                        {specs.map((item, index) => (
+                            <li key={index} className="directory-card__spec-item">
+                                {item.label}: <strong>{item.value}{item.unit || ''}</strong>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-            );
+            </div>
+        );
+    };
+
+    switch (type) {
+        case 'advantages':
+            return renderAdvantagesCard();
+        case 'services':
+            return renderServicesCard();
+        case 'directory':
+            return renderDirectoryCard();
+        default:
+            return null;
     }
 };

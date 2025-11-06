@@ -4,9 +4,9 @@ import './styles.css';
 
 const Directory = () => {
     return (
-        <section id="directory" className="directory_root">
-            <p className="directory_title">Каталог автомобилей</p>
-            <article className="directory_list">
+        <section className="directory">
+            <h2 className="directory__title">Каталог автомобилей</h2>
+            <div className="directory__list">
                 {directoryList.map((dir) => (
                     <Card
                         key={dir.id}
@@ -20,8 +20,9 @@ const Directory = () => {
                         volume={dir.volume}
                     />
                 ))}
-            </article>
+            </div>
         </section>
     );
 };
+
 export default Directory;

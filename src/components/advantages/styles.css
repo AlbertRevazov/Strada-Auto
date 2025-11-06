@@ -1,4 +1,4 @@
-.advantages_root {
+.advantages {
     max-width: 960px;
     margin: 20px auto;
     display: flex;
@@ -9,30 +9,48 @@
     gap: 30px;
 }
 
-.bring_car {
+.advantages__cta {
+    position: relative;
     width: 100%;
     max-width: 930px;
     min-height: 200px;
-    padding: 12px;
+    padding: 0 12px;
     overflow: hidden;
     margin: 20px auto;
-    background: url('../../../public/img/advantages.jpg') center/cover no-repeat;
+    background: url('../../../public/img/advantages.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 15px;
     color: #fff;
-
-    @media (min-width: 768px) {
-        height: 330px;
-    }
+    border-radius: 0 50rem 50rem 0;
+    z-index: 1;
 }
 
-.bring_car_title,
-.bring_car_subtitle {
+.advantages__cta::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(90deg, #e73274c3 0%, #eddd5300 100%);
+    left: 0;
+    z-index: -1;
+}
+
+.advantages__cta-title {
+    max-width: 450px;
     font-family: Jura;
     font-size: 1.6rem;
-    text-align: center;
+    text-align: left;
     text-wrap: balance;
+    z-index: 1;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .advantages__cta {
+        border-radius: 0 1rem 50rem 0;
+        height: 280px;
+    }
 }

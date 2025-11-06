@@ -3,24 +3,24 @@ import './styles.css';
 
 const About = () => {
     return (
-        <section id="about" className="about_root">
-            <article className="about_header">
-                <div className="about_wrap_title">
-                    <h2 className="about_title">{AdvantageInfo.title}</h2>
+        <section id="about" className="about">
+            <div className="about__header">
+                <div className="about__title-wrapper">
+                    <h2 className="about__title">{AdvantageInfo.title}</h2>
                     <img
-                        className="about_icon"
+                        className="about__icon"
                         src="svg/van.svg"
                         loading="lazy"
                         alt="logo"
                         width={55}
                     />
                 </div>
-                <div className="about_wrap_description">
-                    <h4 className="about_description">{AdvantageInfo.description}</h4>
-                    <h4 className="about_description">{AdvantageInfo.descriptionSecond}</h4>
+                <div className="about__description-wrapper">
+                    <p className="about__description">{AdvantageInfo.description}</p>
+                    <p className="about__description about__description--right">{AdvantageInfo.descriptionSecond}</p>
                 </div>
-            </article>
-            <img className="about_img" src="img/about.jpg" loading="lazy" alt="about" />
+            </div>
+            <img className="about__image" src="img/about.webp" loading="lazy" alt="about" />
         </section>
     );
 };

@@ -3,12 +3,13 @@ import './styles.css';
 
 const Contacts = () => {
     return (
-        <div id="contacts" className="contacts_root">
-            <p className="contacts_title">
+        <section id="contacts" className="contacts">
+            <h2 className="contacts__title">
                 Рассчитаем стоимость автомобиля в мессенджерах или по телефону
-            </p>
+            </h2>
             <ContactLinks />
-        </div>
+        </section>
     );
 };
+
 export default Contacts;

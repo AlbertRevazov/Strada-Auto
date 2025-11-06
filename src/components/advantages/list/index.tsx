@@ -4,20 +4,26 @@ import './styles.css';
 
 export const AdvatageList = () => {
     return (
-        <article className="advantages_list">
-            <div className="advantages_list_wrapper">
+        <div className="advantages-list">
+            <div className="advantages-list__header">
                 <img
-                    className="advantages_list_icon"
+                    className="advantages-list__icon"
                     src="svg/van.svg"
                     loading="lazy"
                     alt="logo"
                     width={55}
                 />
-                <h2 className="advantages_list_title">Почему выбирают нас?</h2>
+                <h2 className="advantages-list__title">Почему выбирают нас?</h2>
             </div>
-            {advantagesList.map((item) => (
-                <Card type="card" key={item.id} title={item.title} subtitle={item.subtitle} />
+            {advantagesList.map((item, idx) => (
+                <Card
+                    type="advantages"
+                    idx={idx}
+                    key={item.id + idx}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                />
             ))}
-        </article>
+        </div>
     );
 };

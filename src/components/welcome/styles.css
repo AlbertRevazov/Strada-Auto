@@ -1,16 +1,12 @@
 @import '../../fonts/fonts.css';
 
 .welcome {
-    width: 100;
+    width: 100%;
     min-width: 300px;
     height: 300px;
     position: relative;
     overflow: hidden;
-    background: url('../../../public/img/welcome.jpg') center/cover no-repeat;
-
-    @media (min-width: 768px) {
-        height: 80vh;
-    }
+    background: url('../../../public/img/welcome.webp') center/cover no-repeat;
 }
 
 .welcome__container {
@@ -22,7 +18,7 @@
     margin: 0 auto;
 }
 
-.welcome_logo {
+.welcome__logo {
     position: relative;
     top: 2vh;
     width: 250px;
@@ -31,15 +27,6 @@
 
 .welcome__nav {
     display: none;
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        padding-top: 5vh;
-        gap: 2rem;
-        z-index: 2;
-    }
 }
 
 .welcome__nav-link {
@@ -51,16 +38,12 @@
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease-in;
     color: #fff;
+    text-decoration: none;
+}
 
-    @media (min-width: 768px) {
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    &:hover {
-        border-bottom-color: sandybrown;
-        cursor: pointer;
-    }
+.welcome__nav-link:hover {
+    border-bottom-color: sandybrown;
+    cursor: pointer;
 }
 
 .welcome__header {
@@ -70,14 +53,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 7vh;
     background: radial-gradient(circle, #313233c9 61%, #a993b300 100%);
-
-    @media (min-width: 768px) {
-        text-align: left;
-        padding: 1.5rem 0;
-        margin-top: 20vh;
-    }
 }
 
 .welcome__content {
@@ -89,10 +66,6 @@
     padding: 0.75rem;
     margin: 0 auto;
     gap: 2px;
-
-    @media (min-width: 768px) {
-        gap: 8px;
-    }
 }
 
 .welcome__title {
@@ -103,10 +76,6 @@
     text-align: left;
     text-wrap: balance;
     margin: 10px 0;
-
-    @media (min-width: 768px) {
-        font-size: 4rem;
-    }
 }
 
 .welcome__subtitle {
@@ -116,8 +85,43 @@
     font-weight: 800;
     text-align: left;
     text-wrap: balance;
+}
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
+    .welcome {
+        height: 80vh;
+    }
+
+    .welcome__nav {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 5vh;
+        gap: 2rem;
+        z-index: 2;
+    }
+
+    .welcome__nav-link {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .welcome__header {
+        text-align: left;
+        padding: 3rem 0;
+        margin-top: 13vh;
+    }
+
+    .welcome__content {
+        gap: 8px;
+    }
+
+    .welcome__title {
+        font-size: 4rem;
+    }
+
+    .welcome__subtitle {
         font-size: 1.75rem;
     }
 }

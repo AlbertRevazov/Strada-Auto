@@ -1,0 +1,14 @@
+.loader_root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: auto;
+    font-size: 6rem;
+}
+
+.loader_img{
+    width: 250px;
+}

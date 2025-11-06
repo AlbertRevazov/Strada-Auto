@@ -5,8 +5,8 @@ import './styles.css';
 const Welcome = () => {
     return (
         <section className="welcome">
-            <article className="welcome__container">
-                <img className="welcome_logo" src="/img/welcome_logo.png" alt="Strada Auto" />
+            <div className="welcome__container">
+                <img className="welcome__logo" src="/img/welcome_logo.webp" alt="Strada Auto" />
                 <nav className="welcome__nav">
                     {links.map((item) => (
                         <a key={item.link} href={`#${item.link}`} className="welcome__nav-link">
@@ -25,7 +25,7 @@ const Welcome = () => {
                         </a>
                     </div>
                 </header>
-            </article>
+            </div>
         </section>
     );
 };

@@ -1,0 +1,130 @@
+.footer {
+    background: #0f0f0fbf;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.footer__header {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.footer__title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Jura', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: white;
+}
+
+.footer__description {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ffffffe6;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.footer__contacts {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__subtitle {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: #e16e03;
+}
+
+.footer__contact-list {
+    display: inline-block;
+    text-align: center;
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.footer__contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__contact-icon {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+.footer__contact-text {
+    color: #fffffff2;
+}
+
+.footer__copyright {
+    border-top: 2px solid #e16e03;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+}
+
+.footer__copyright-title {
+    font-size: 1.2rem;
+    color: #ffffffcc;
+    margin: 0;
+}
+
+.footer__copyright-subtitle {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 9px;
+    display: block;
+    text-wrap: balance;
+    line-height: 20px;
+}
+
+.footer__copyright-subtitle a {
+    padding: 0 4px;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #06deff;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: 767.98px) {
+    .footer__container {
+        flex-direction: row;
+    }
+
+    .footer__header {
+        text-align: left;
+    }
+
+    .footer__title {
+        justify-content: flex-start;
+    }
+
+    .footer__contacts {
+        text-align: left;
+    }
+}

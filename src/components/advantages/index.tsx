@@ -4,14 +4,14 @@ import './styles.css';
 
 const Advantages = () => {
     return (
-        <section id="advantages" className="advantages_root">
+        <section id="advantages" className="advantages">
             <AdvatageList />
-            <article className="bring_car">
-                <p className="bring_car_title">Привезём машину вашей мечты за 20-60 дней</p>
-
+            <div className="advantages__cta">
+                <p className="advantages__cta-title">Привезём машину вашей мечты за 20-60 дней</p>
                 <Button title="Получить консультацию →" />
-            </article>
+            </div>
         </section>
     );
 };
+
 export default Advantages;

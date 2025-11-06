@@ -1,62 +1,212 @@
-.card_root,
-.directory_card_root {
+/* ===== ADVANTAGES CARD ===== */
+.advantages-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-wrap: balance;
     gap: 15px;
-    margin: 16px auto;
-    width: 420px;
+    margin: 16px 0;
+    min-width: 350px;
     font-size: medium;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 4px solid #e12c10;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px #0000001a;
 }
 
-.card_title {
-    font-family: MontserratAlternates;
-    font-size: 1.2rem;
+.advantages-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #e12c1026;
+    border-left-color: #e16e03;
 }
 
-.card_subtitle {
-    padding: 0 10px;
-    font-family: Jura;
+.advantages-card--odd {
+    align-items: flex-end;
+    text-align: right;
+    border-left: none;
+    border-right: 4px solid #e12c10;
+}
+
+.advantages-card--odd:hover {
+    border-right-color: #e16e03;
+}
+
+.advantages-card__title {
+    color: #e12c10;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.advantages-card__subtitle {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
     font-weight: 300;
-    font-size: 1rem;
-    line-height: 18px;
     color: #848484;
     text-wrap: balance;
-    text-align: left;
+    margin: 0;
 }
 
-.card_image {
-    height: 150px;
+.advantages-card__subtitle--odd {
+    text-align: right;
+}
+
+.advantages-card__image {
+    height: 220px;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.directory_card_root {
+/* ===== SERVICES CARD ===== */
+.services-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    border: 1px solid sandybrown;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.services-card__title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #e12c10;
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+}
+
+.services-card__description {
+    color: #666;
+    font-family: 'Jura';
+    font-size: 1.3rem;
+    line-height: 1.3;
+    text-wrap: balance;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* ===== DIRECTORY CARD ===== */
+.directory-card {
     position: relative;
     min-width: 290px;
-    z-index: -1;
+    z-index: 1;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.directory_card_image {
-    border-radius: 55px 0px 55px 0px;
+.directory-card__title {
+    color: #e12c10;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.directory-card__subtitle {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #848484;
+    text-wrap: balance;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.directory-card__image {
     height: 400px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.directory_item {
+.directory-card__specs {
     width: 100%;
-    background: linear-gradient(99deg, #e16e037d 56%, #ffffff00 78%);
-    padding: 12px 10px;
+    padding: 20px 16px;
     position: absolute;
-    top: 7vh;
+    top: 12%;
     right: 0;
     z-index: 2;
+    background: linear-gradient(
+        99deg,
+        #141414f2 0%,
+        #1e1e1ee6 30%,
+        #282828cc 60%,
+        #32323299 80%,
+        transparent 95%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 4px solid #e16e03;
 }
 
-.directory_item_key {
-    font-family: Jura;
+.directory-card__specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-card__spec-item {
+    font-family: 'Jura', sans-serif;
     font-weight: 600;
-    text-align: left;
     color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    text-shadow: 0 1px 2px #000000cc;
+    padding: 4px 0;
+}
+
+.directory-card__spec-item:last-child {
+    margin-bottom: 0;
+}
+
+.directory-card__spec-item strong {
+    color: #ffa500;
+    font-weight: 700;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 968px) {
+    .services-card:last-child {
+        width: 100%;
+        height: 100%;
+    }
+    .services-card {
+        padding: 2rem;
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) {
+    .advantages-card {
+        max-width: 960px;
+        margin: 12px 0;
+        padding: 2rem;
+    }
+
+    .services-card__description {
+        font-size: 1.1rem;
+    }
+
+    .directory-card__specs {
+        padding: 24px 20px;
+    }
 }
