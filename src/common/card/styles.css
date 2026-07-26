@@ -1,4 +1,6 @@
+/*=============================*/
 /* ===== ADVANTAGES CARD ===== */
+/* =========================== */
 .advantages-card {
     display: flex;
     flex-direction: column;
@@ -61,7 +63,9 @@
     border-radius: 8px;
 }
 
+/* ========================= */
 /* ===== SERVICES CARD ===== */
+/* ========================= */
 .services-card {
     background: #fff;
     padding: 2.5rem;
@@ -99,13 +103,14 @@
     flex-grow: 1;
 }
 
+/* ========================== */
 /* ===== DIRECTORY CARD ===== */
+/* ========================== */
 .directory-card {
     position: relative;
     min-width: 290px;
     z-index: 1;
     background: #fff;
-    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -113,13 +118,23 @@
 }
 
 .directory-card__title {
-    color: #e12c10;
-    font-family: 'Jura', sans-serif;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    color: #ffa500;
+    font-family: 'PoiretOne', sans-serif;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 800;
+    padding: 16px 22px;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.directory-card__subtitle {
+/* .directory-card__subtitle {
     font-family: 'Jura', sans-serif;
     font-size: 1.3rem;
     line-height: 1.4;
@@ -128,49 +143,52 @@
     text-wrap: balance;
     margin: 0;
     padding: 0 1rem;
-}
+} */
 
 .directory-card__image {
-    height: 400px;
+    height: 60vh;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    object-position: center;
+    border-radius: 16px;
 }
 
 .directory-card__specs {
-    width: 100%;
-    padding: 20px 16px;
     position: absolute;
-    top: 12%;
-    right: 0;
-    z-index: 2;
-    background: linear-gradient(
-        99deg,
-        #141414f2 0%,
-        #1e1e1ee6 30%,
-        #282828cc 60%,
-        #32323299 80%,
-        transparent 95%
-    );
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-left: 4px solid #e16e03;
+    bottom: 6%;
+    left: 5%;
+    width: auto;
+    max-width: 90%;
+    padding: 16px 32px;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .directory-card__specs-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .directory-card__spec-item {
     font-family: 'Jura', sans-serif;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-    text-shadow: 0 1px 2px #000000cc;
-    padding: 4px 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .directory-card__spec-item:last-child {
@@ -182,12 +200,16 @@
     font-weight: 700;
 }
 
+/* ========================= */
 /* ===== MEDIA QUERIES ===== */
+/* ========================= */
+
 @media (min-width: 968px) {
     .services-card:last-child {
         width: 100%;
         height: 100%;
     }
+
     .services-card {
         padding: 2rem;
         width: 300px;
@@ -206,7 +228,20 @@
         font-size: 1.1rem;
     }
 
+    .directory-card__specs-list {
+        gap: 40px
+    }
+
     .directory-card__specs {
         padding: 24px 20px;
+        left: 20%;
+    }
+    .directory-card__title {
+        position: absolute;
+        top: 2%;
+        left: 1%;
+        color: #ffa500;
+        font-family: 'PoiretOne', sans-serif;
+        font-size: 1.6rem;
     }
 }

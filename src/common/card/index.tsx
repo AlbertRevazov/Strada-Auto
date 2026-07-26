@@ -32,7 +32,6 @@ export const Card: React.FC<ICardProps> = ({
     gearbox,
     power,
     volume,
-    icon
 }) => {
     const isEven = (idx ?? 0) % 2 === 0;
 
@@ -71,13 +70,19 @@ export const Card: React.FC<ICardProps> = ({
         return (
             <div className="directory-card">
                 {renderImage('directory-card__image', title || 'Car image')}
-                <h3 className="directory-card__title">{title}</h3>
+                <h3 className="directory-card__title" data-swiper-parallax="-20%">
+                    {title}
+                </h3>
                 {subtitle && <h4 className="directory-card__subtitle">{subtitle}</h4>}
-                <div className="directory-card__specs">
+                <div className="directory-card__specs" data-swiper-parallax="-100%">
                     <ul className="directory-card__specs-list">
                         {specs.map((item, index) => (
                             <li key={index} className="directory-card__spec-item">
-                                {item.label}: <strong>{item.value}{item.unit || ''}</strong>
+                                {item.label}:{' '}
+                                <strong>
+                                    {item.value}
+                                    {item.unit || ''}
+                                </strong>
                             </li>
                         ))}
                     </ul>

@@ -1,5 +1,3 @@
-import { title } from 'process';
-
 export const links = [
     { id: 0, link: 'about', title: 'О нас' },
     { id: 1, link: 'advantages', title: 'Преимущества' },
