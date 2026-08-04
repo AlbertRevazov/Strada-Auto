@@ -1,7 +1,7 @@
 import { directoryList } from '../../data';
-import { Card } from '../../common/card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Parallax } from 'swiper/modules';
+import { DirectoryCard } from '../../common/card/directory';
 import './styles.css';
 import 'swiper/css';
 
@@ -22,11 +22,10 @@ const Directory = () => {
             >
                 {directoryList.map((dir) => (
                     <SwiperSlide>
-                        <Card
+                        <DirectoryCard
                             data-swiper-parallax="-300"
                             data-swiper-parallax-duration="600"
                             key={dir.id}
-                            type="directory"
                             img={dir.src}
                             title={dir.title}
                             acceleration={dir.acceleration}

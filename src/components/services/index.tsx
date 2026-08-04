@@ -1,4 +1,4 @@
-import { Card } from '../../common/card';
+import { ServiceCard } from '../../common/card/service';
 import { ServicesList } from '../../data';
 import './styles.css';
 
@@ -16,15 +16,14 @@ const Services = () => {
                 />
             </div>
             <div className="services__list">
-                {ServicesList.map((service, idx) =>
-                    <Card
-                        type="services"
+                {ServicesList.map((service, idx) => (
+                    <ServiceCard
                         key={service.id + service.title}
                         img={service.img}
                         title={service.title}
                         subtitle={service.subtitle}
                     />
-                )}
+                ))}
             </div>
         </section>
     );

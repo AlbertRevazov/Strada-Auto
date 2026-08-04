@@ -1,0 +1,50 @@
+.advantages-card {
+    background: #fff;
+    border-radius: 0 12px 12px 0;
+    box-sizing: border-box;
+    border: 1px solid sandybrown;
+    max-width: 960px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-wrap: balance;
+    text-align: center;
+}
+
+.advantages-card__title {
+    color: sandybrown;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.advantages-card__subtitle {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 300;
+    min-height: 300px;
+    color: #fff;
+    background-color: sandybrown;
+    margin: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .advantages-card {
+        border-radius: 12px 12px 0 0;
+        margin: 12px 0;
+    }
+
+    .advantages-card__subtitle {
+        min-height: 120px;
+    }
+}

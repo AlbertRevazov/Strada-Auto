@@ -1,29 +1,44 @@
 import { advantagesList } from '../../../data';
-import { Card } from '../../../common/card';
+import { AdvantagesCard } from '../../../common/card/advantages';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import './styles.css';
+import 'swiper/swiper.css';
 
 export const AdvatageList = () => {
     return (
         <div className="advantages-list">
-            <div className="advantages-list__header">
+            <header className="advantages-list__header">
                 <img
-                    className="advantages-list__icon"
+                    className="services__icon"
                     src="svg/van.svg"
                     loading="lazy"
                     alt="logo"
                     width={55}
                 />
                 <h2 className="advantages-list__title">Почему выбирают нас?</h2>
-            </div>
-            {advantagesList.map((item, idx) => (
-                <Card
-                    type="advantages"
-                    idx={idx}
-                    key={item.id + idx}
-                    title={item.title}
-                    subtitle={item.subtitle}
-                />
-            ))}
+            </header>
+            <Swiper
+                className="advantages-swiper"
+                modules={[Autoplay]}
+                speed={1200}
+                spaceBetween={40}
+                loop
+                slidesPerView={1}
+                autoplay
+                direction="horizontal"
+            >
+                {advantagesList.map((item, idx) => (
+                    <SwiperSlide>
+                        <AdvantagesCard
+                            idx={idx}
+                            key={item.id + idx}
+                            title={item.title}
+                            subtitle={item.subtitle}
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 };
