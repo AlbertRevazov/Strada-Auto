@@ -33,6 +33,7 @@
     min-height: 300px;
     color: #fff;
     background-color: sandybrown;
+    border-radius: 12px 12px 0 0;
     margin: 0;
     padding: 12px;
     cursor: pointer;
