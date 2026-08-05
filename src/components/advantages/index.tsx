@@ -4,7 +4,7 @@ import { AdvatageList } from './list';
 import './styles.css';
 
 const Advantages = () => {
-    const { ref, isVisible } = useInView({ threshold: 0.6 });
+    const { ref, isVisible } = useInView({ threshold: 0.7 });
 
     return (
         <section id="advantages" className="advantages" ref={ref}>

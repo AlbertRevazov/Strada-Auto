@@ -17,7 +17,7 @@
     padding: 0 12px;
     overflow: hidden;
     margin: 20px auto;
-    background: url('../../../public/img/advantages.webp') center no-repeat;
+    background: url('/img/advantages.webp') center no-repeat;
     background-size: auto;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .inView--animate {
-    animation: ctaPolygonOpen 1s 1 ease forwards;
+    animation: ctaPolygonOpen 0.8s 1 ease forwards;
 }
 
 .advantages__cta::after {
