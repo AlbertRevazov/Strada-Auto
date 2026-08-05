@@ -10,7 +10,9 @@ export const AdvantagesCard: React.FC<ICardProps> = ({ title, subtitle }) => {
     return (
         <div className="advantages-card">
             <h3 className="advantages-card__title">{title}</h3>
-            <h4 className="advantages-card__subtitle">{subtitle}</h4>
+            <h4 data-swiper-parallax-y="-600" className="advantages-card__subtitle">
+                {subtitle}
+            </h4>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import { advantagesList } from '../../../data';
 import { AdvantagesCard } from '../../../common/card/advantages';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Parallax } from 'swiper/modules';
 import './styles.css';
 import 'swiper/swiper.css';
 
@@ -20,18 +20,21 @@ export const AdvatageList = () => {
             </header>
             <Swiper
                 className="advantages-swiper"
-                modules={[Autoplay]}
+                modules={[Autoplay, Parallax]}
                 speed={1200}
                 spaceBetween={40}
                 loop
                 slidesPerView={1}
-                autoplay
-                direction="horizontal"
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                direction="vertical"
+                parallax
             >
                 {advantagesList.map((item, idx) => (
                     <SwiperSlide>
                         <AdvantagesCard
-                            idx={idx}
                             key={item.id + idx}
                             title={item.title}
                             subtitle={item.subtitle}
